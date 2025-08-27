@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><!-- // Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--// Ensures proper rendering and touch zooming on mobile devices-->
+    <title>API Dashboard Final Project</title><!--// Title of the webpage-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!--// Font Awesome for icons-->
+    <link rel="stylesheet" href="styles.css"><!--// Link to external CSS file-->
+    <script src="script.js" defer></script><!--Link to external JavaScript file, deferred to load after HTML parsing-->
+</head>
+<body>
+    <div class="container"><!--// Main container for the dashboard-->
+        <header>
+            <button class="menu-toggle"><!--Button to toggle the sidebar menu--> 
+                <i class="fas fa-bars"></i>
+            </button>
+            <div>
+                <h1>API Showcase Final Project</h1><!--Main title for the dashboard-->
+                <div class="subtitle">Explore various APIs being showcased in Justin Wold's Zero to Javascript Mastery Final</div><!--Subtitle for the dashboard-->
+            </div>
+            <div></div> <!-- Empty div for spacing -->
+        </header>
+        
+        <div class="dashboard"><!--// Dashboard section containing sidebar and main view-->
+            <div class="mini-player">
+                <div class="api-option active" data-api="dog"><!--// Sidebar option for Dog API-->
+                    <div class="api-icon"><i class="fas fa-dog"></i></div>
+                    <div class="api-name">Random Dog</div>
+                    <div class="api-description">Gets random dog images from the Dog API</div>
+                </div>
+                <div class="api-option" data-api="cat"><!--// Sidebar option for Cat API-->
+                    <div class="api-icon"><i class="fas fa-cat"></i></div>
+                    <div class="api-name">Random Cat</div>
+                    <div class="api-description">Gets random cat images from the Cat API</div>
+                </div>
+                <div class="api-option" data-api="weather"><!--// Sidebar option for Weather API-->
+                    <div class="api-icon"><i class="fas fa-cloud-sun"></i></div>
+                    <div class="api-name">Weather</div>
+                    <div class="api-description">Shows current weather data from Open-Meteo</div>
+                </div>
+                <div class="api-option" data-api="currency"><!--// Sidebar option for Currency API-->
+                    <div class="api-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <div class="api-name">Currency</div>
+                    <div class="api-description">Displays USD to EUR exchange rates</div>
+                </div>
+                <div class="api-option" data-api="movies"><!--// Sidebar option for Movies API-->
+                    <div class="api-icon"><i class="fas fa-film"></i></div>
+                    <div class="api-name">Movies</div>
+                    <div class="api-description">Shows trending movies from TMDB API</div>
+                </div>
+                <div class="api-option" data-api="github"><!--// Sidebar option for GitHub User API-->
+                    <div class="api-icon"><i class="fab fa-github"></i></div>
+                    <div class="api-name">GitHub User</div>
+                    <div class="api-description">Displays GitHub user profile information</div>
+                </div>
+                <div class="api-option" data-api="joke"><!--// Sidebar option for Joke API-->
+                    <div class="api-icon"><i class="fas fa-laugh-squint"></i></div>
+                    <div class="api-name">Random Joke</div>
+                    <div class="api-description">Fetches random jokes from JokeAPI</div>
+                </div>
+                <div class="api-option" data-api="public"><!--// Sidebar option for Public APIs-->
+                    <div class="api-icon"><i class="fas fa-list"></i></div>
+                    <div class="api-name">Public APIs</div>
+                    <div class="api-description">Shows featured public APIs</div>
+                </div>
+            </div>
+            
+            <div class="main-view"><!--// Main view area to display selected API data-->
+                <div class="view-header">
+                    <div class="view-title">Random Dog API</div><!--Title of the currently selected API-->
+                    <button class="refresh-btn" id="refresh-btn"><i class="fas fa-sync-alt"></i> Refresh</button>
+                </div>
+                <div class="view-content" id="view-content">
+                    <p class="loading">Loading dog image...</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-area">
+            <div class="chat-header">Anonymous Chat</div><!--Header for the chat area-->
+            <div class="chat-messages" id="chat-messages">
+                <div class="message"><span class="user">System:</span> Welcome to the chat! Say hello to other visitors.</div><!--Initial system message in the chat-->
+            </div>
+            <div class="chat-input"><!--Input area for sending chat messages-->
+                <input type="text" id="chat-input" placeholder="Type your message here...">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+        
+        <footer><!--// Footer section-->
+            This site was crafted with &hearts; by Justin Wold
+        </footer>
+    </div>
+
+    </div>
+</body>
+</html>
