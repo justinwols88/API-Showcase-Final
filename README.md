@@ -1,7 +1,7 @@
 API Dashboard
 A modern, responsive web dashboard that allows users to interact with multiple APIs in one place. This project showcases the integration of various public APIs with a clean and intuitive user interface.
 
-https://via.placeholder.com/800x400/ff7e00/ffffff?text=API+Dashboard
+https://www.api-showcase-final.netlify.app
 
 Features
 Multiple API Integrations: Access 7 different APIs from a single dashboard
